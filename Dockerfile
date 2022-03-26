@@ -22,7 +22,7 @@ WORKDIR /
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
-COPY --from=builder ["/build/bin/tawicore", "/"]
+COPY --from=builder ["/build/bin/myapp", "/"]
 
 COPY --from=builder ["/build/config/config.yaml", "/config/"]
 
