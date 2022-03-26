@@ -1,26 +1,19 @@
 cache:
-  RedisUser: default
-  RedisPass: ""
-  RedisHost: localhost
-  RedisPort: 6379
+  RedisURL: "redis://host:port/db"
 
 db:
-  DBUser: "entapplication"
-  DBPass: "entapplication"
-  DBHost: localhost
-  DBName: "entapplication"
-  DBPort: 5432
+  DataBaseURL: "postgres://u:p@host:5432/db"
 
 server:
-  Port: 42069
+  Port: 34567
   ReadTimeout: 60
-  AppName: "EntApplication"
-  ServerHeader: "EntApplication"
+  AppName: "MyApp"
+  ServerHeader: "MyApp"
   Prefork: true
 
 
 logger:
-  LogFile: "/tmp/entapplication.log"
+  LogFile: "/tmp/myapp.log"
   Timezone: "Africa/Nairobi"
   LoggerMaxFileSize: 10
   CompressLogFile: true
